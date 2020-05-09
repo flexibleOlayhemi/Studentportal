@@ -15,13 +15,13 @@
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 100;
-                height: 50vh;
+                font-weight: 200;
+                height: 80vh;
                 margin: 0;
             }
 
             .full-height {
-                height: 50vh;
+                height: 100vh;
             }
 
             .flex-center {
@@ -45,7 +45,9 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 24px;
+                font-weight: bold;
+                
             }
 
             .links > a {
@@ -81,7 +83,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Student Portal by @flexibleOlayemi
+                    Student Portal by<br> @flexibleOlayemi
                 </div>
 
               

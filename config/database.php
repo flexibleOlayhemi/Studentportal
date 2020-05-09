@@ -15,8 +15,8 @@ return [
     |
     */
 
-    //'default' => env('DB_CONNECTION', 'mysql'), //for local
-    'default' => 'pgsql',                         //for Remote
+    'default' => env('DB_CONNECTION', 'mysql'), //for local
+    //'default' => 'pgsql',                         //for Remote
 
     /*
     |--------------------------------------------------------------------------
