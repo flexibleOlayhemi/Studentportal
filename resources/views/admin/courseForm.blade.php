@@ -14,7 +14,7 @@
     <form action="/admin" method="POST" class="pb-5">
     @method('PUT')
         <div class="form-group pb-2">
-                <label for="Name"> title:</label> 
+                <label for="Name"> Title:</label> 
                 <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                 <div>{{ $errors->first('title') }}</div>
                 
@@ -41,11 +41,11 @@
                 <label for="gender">Unit</label>
                 <select name="unit" id="unit" class="form-control">
                     <option value="" disabled>Select unit</option>
-                    <option value="100" >1</option>
-                    <option value="200" >2</option>
-                    <option value="300" >3</option>
-                    <option value="400" >4</option>
-                    <option value="500" >5</option>  
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                    <option value="5" >5</option>  
                 </select>
             </div>
             <div class="form-group pb-2">
