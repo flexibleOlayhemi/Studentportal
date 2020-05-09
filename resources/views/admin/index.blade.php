@@ -6,9 +6,15 @@
  
     <div class="row">
         <div class="col-12">
-            <div class="d-flex ">
+            <div class="d-flex ml-3">
              @can('createStudent',\App\Student::class)
              <a href="/admin/add-student"> <button class="btn btn-primary m-3"> Add new student</button></a>
+             @endcan
+             </div>
+
+             <div class="d-flex ">
+             @can('createCourses',\App\Courses::class)
+             <a href="/admin/add-course"> <button class="btn btn-primary m-3"> Add new course</button></a>
              @endcan
              </div>
         </div>

@@ -39,6 +39,8 @@ Route::patch('/courses/{course}/{student}', 'courseController@upload');
 Route::get('/admin', 'adminController@index');
 Route::delete('/admin', 'adminController@destroy');
 Route::get('/admin/add-student', 'adminController@createStudent');
+Route::get('/admin/add-course', 'adminController@createCourse');
 Route::post('/admin', 'adminController@storeStudent');
+Route::put('/admin', 'adminController@storeCourse');
 Route::get('/admin/add-lecturer', 'adminController@createLecturer');
 

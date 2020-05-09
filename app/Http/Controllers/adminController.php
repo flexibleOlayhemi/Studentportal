@@ -24,6 +24,10 @@ class adminController extends Controller
         $this->authorize('createStudent', Student::class);
         return view('admin.studentform');
     }
+    public function createCourse(){
+        $this->authorize('createCourse', Courses::class);
+        return view('admin.courseForm');
+    }
 
     public function storeStudent(){
        $data = request()->validate([
@@ -39,6 +43,21 @@ class adminController extends Controller
         Student::create($data);
         return redirect('admin');
     }
+
+    public function storeCourse(){
+        $data = request()->validate([
+             'title' => 'required',
+             'code' => 'required',
+             'level' => 'required',
+             'unit' => 'required',
+             'coordinator' => 'required',
+             
+             
+         ]);
+ 
+         Courses::create($data);
+         return redirect('admin');
+     }
     public function destroy(Student $student){
         $id = request('id');
         $student->where('id',$id)->delete();
