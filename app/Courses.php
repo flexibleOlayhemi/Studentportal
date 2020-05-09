@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Courses extends Model
 {
-    protected $gaurded = [];
+    
+    protected $guarded = [];
 
     function student(){
 

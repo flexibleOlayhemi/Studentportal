@@ -21,6 +21,7 @@ class studentPolicy
         return in_array($user->email,[
             'lyhemi@gmail.com',
             'kosoko@gmail.com',
+            'icelake0@gmail.com',
         ]);
         
     }

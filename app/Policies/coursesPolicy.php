@@ -18,6 +18,7 @@ class coursesPolicy
     public function createCourse(User $user){
         return in_array($user->email,[
             'lyhemi@gmail.com',
+            'icelake0@gmail.com',
             
         ]);
     }
