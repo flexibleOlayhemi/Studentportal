@@ -34,7 +34,7 @@
                             <tr>
                                 <td>{{$course->title}}</td>
                                 <td>{{$course->code}}</td>
-                                <td>3</td>
+                                <td>{{$course->unit}}</td>
                                 <td>{{ $course->pivot->test_score }}</td>
                                 <td>{{ $course->pivot->exam_score }}</td>
                                 <td>{{ $course->pivot->total_score }}</td>
