@@ -11,7 +11,7 @@
             <h3>Add new Student</h3>
         </div>
     </div>
-    <form action="/admin" method="POST" class="pb-5">
+    <form action="{{ route('admin.storestudent') }}" method="POST" class="pb-5">
         <div class="form-group pb-2">
                 <label for="Name"> Name:</label> 
                 <input type="text" class="form-control" name="name" value="{{ old('name') }}">

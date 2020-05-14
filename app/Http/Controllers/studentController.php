@@ -50,5 +50,5 @@ class studentController extends Controller
     function addCourses(){
         return explode(',',implode(',',request('courses')));
     }
-
+    
 }

@@ -24,23 +24,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/students', 'studentController@index');
-Route::post('/students', 'studentController@selectCourse');
-Route::get('/students/{student}', 'studentController@show');
-Route::post('/students/{student}', 'studentController@selectCourse');
-Route::options('/students/{student}', 'studentController@checkResults');
-Route::delete('/students/{student}', 'studentController@removeCourse');
+Route::get('/students', 'studentController@index')->name('student.index');
+Route::post('/students', 'studentController@selectCourse')->name('student.select');
+Route::get('/students/{student}', 'studentController@show')->name('student.show');
+Route::post('/students/{student}', 'studentController@selectCourse')->name('student.selcourse');
+Route::options('/students/{student}', 'studentController@checkResults')->name('student.result');
+Route::delete('/students/{student}', 'studentController@removeCourse')->name('student.remcourse');
 
-Route::get('/courses', 'courseController@index');
-Route::get('/courses/{course}', 'courseController@show');
-Route::get('/courses/{course}/{student}', 'courseController@score');
-Route::patch('/courses/{course}/{student}', 'courseController@upload');
 
-Route::get('/admin', 'adminController@index');
-Route::delete('/admin', 'adminController@destroy');
-Route::get('/admin/add-student', 'adminController@createStudent');
-Route::get('/admin/add-course', 'adminController@createCourse');
-Route::post('/admin', 'adminController@storeStudent');
-Route::put('/admin', 'adminController@storeCourse');
-Route::get('/admin/add-lecturer', 'adminController@createLecturer');
+Route::get('/courses', 'courseController@index')->name('courses.index');
+Route::get('/courses/{course}', 'courseController@show')->name('courses.show');
+Route::get('/courses/{course}/{student}', 'courseController@score')->name('courses.score');
+Route::patch('/courses/{course}/{student}', 'courseController@upload')->name('courses.upload');
+
+Route::get('/admin', 'adminController@index')->name('admin.index');
+Route::delete('/admin', 'adminController@destroy')->name('admin.destroy');
+Route::get('/admin/add-student', 'adminController@createStudent')->name('admin.addstudent');
+Route::get('/admin/add-course', 'adminController@createCourse')->name('admin.addcourse');
+Route::post('/admin', 'adminController@storeStudent')->name('admin.storestudent');
+Route::put('/admin', 'adminController@storeCourse')->name('admin.storecourse');
+Route::get('/admin/add-lecturer', 'adminController@createLecturer')->name('admin.createlecturer');
 

@@ -55,7 +55,7 @@
                                     {{$student->level}}
                                 </div>
                                 <div class="col-3 py-2">
-                                <a href="/courses/{{$course->id}}/{{$student->id}}"><button class="btn btn-primary"> Upload Result</button></a>
+                                <a href="{{ route('courses.score',['course' => $course,'student' => $student])}}"><button class="btn btn-primary"> Upload Result</button></a>
                                 </div>
                             </div> 
                                 

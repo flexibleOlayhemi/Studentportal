@@ -8,10 +8,10 @@
         <div class="col-12">
             <div class="d-flex">
              @can('createStudent',\App\Student::class)
-                <a href="/admin/add-student"> <button class="btn btn-primary m-3"> Add new student</button></a>
+                <a href="{{ route('admin.addstudent')}}"> <button class="btn btn-primary m-3"> Add new student</button></a>
              @endcan
              @can('createCourse',\App\Courses::class)
-                <a href="/admin/add-course"> <button class="btn btn-primary m-3"> Add new course</button></a>
+                <a href="{{ route('admin.addcourse')}}"> <button class="btn btn-primary m-3"> Add new course</button></a>
              @endcan
              
              
@@ -36,7 +36,7 @@
                                         <div class="col-4 py-3">
                                             @can('destroy',\App\Student::class)
                                                 
-                                                    <form action="" method="post">
+                                                    <form action="{{ route('admin.destroy')}}" method="post">
                                                     @method('delete')
                                                     <button class="btn btn-danger" name="id" value="{{$student->id}}">Delete</button>
                                                     @csrf

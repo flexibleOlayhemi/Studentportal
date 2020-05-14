@@ -44,13 +44,13 @@
                     <ul class="navbar-nav mr-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="/students">Students</a>
+                            <a class="nav-link" href="{{ route('student.index') }}">Students</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/courses">Courses</a>
+                            <a class="nav-link" href="{{route('courses.index')}}">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin">Admin</a>
+                            <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
                         </li>
                     </ul>
                     <!-- Right Side Of Navbar -->

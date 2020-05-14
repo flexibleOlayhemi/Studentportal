@@ -8,7 +8,7 @@
   
 <div class="row">
    <div class="col-4">
-        <form action="/students/{{$student->id}}" method="POST" class="pb-5">
+        <form action="{{ route('student.selcourse',['student'=>$stud])}}" method="POST" class="pb-5">
             
             <div class="form-group">
                 <label for="courses">Courses</label>
@@ -23,7 +23,7 @@
             @csrf
         </form>
         <hr>
-        <form action="/students/{{$student->id}}" method="post">
+        <form action="{{ route('student.result',['student'=>$stud])}}" method="post">
             @method('options')
             <button name="course" value="{{$course->id}}" class="btn btn-primary ">View Raw Scores</button>
         </form>
@@ -66,7 +66,7 @@
                                     {{$course->coordinator}}
                                 </div>
                                 <div class="col-2 py-2">
-                                    <form action="/students/{{$student->id}}" method="post">
+                                    <form action="{{ route('student.remcourse',['student'=>$stud])}}" method="post">
                                         @method('DELETE')
                                         <button name="course" value="{{$course->id}}" class="btn btn-danger ">Remove</button>
                                      @csrf

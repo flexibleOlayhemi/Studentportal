@@ -37,4 +37,6 @@ class courseController extends Controller
          ->update(['test_score'=> request('ts'),'exam_score'=> request('es'),'total_score' => (request('ts') + request('es'))]);   
         return redirect('courses/'.$course->id)->with('message','Score Uploaded');
     }
+
+    
 }

@@ -13,7 +13,7 @@
        <h4 class="pb-3">Upload {{$course->title}} Scores for {{$student->name}}</h4>
        </div>
    </div>
-    <form action="/courses/{{$course->id}}/{{$student->id}}" method="POST" class="pb-5">
+    <form action="{{ route('courses.score',['course' => $course,'student' => $student])}}" method="POST" class="pb-5">
         @method('patch')
         <div class="row">
             <div class="col-6">

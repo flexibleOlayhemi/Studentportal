@@ -11,7 +11,7 @@
             <h3>Add new Course</h3>
         </div>
     </div>
-    <form action="/admin" method="POST" class="pb-5">
+    <form action="{{ route('admin.storecourse') }}" method="POST" class="pb-5">
     @method('PUT')
         <div class="form-group pb-2">
                 <label for="Name"> Title:</label> 
