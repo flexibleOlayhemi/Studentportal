@@ -14,7 +14,7 @@
        </div>
    </div>
     <form action="{{ route('courses.score',['course' => $course,'student' => $student])}}" method="POST" class="pb-5">
-        @method('patch')
+        
         <div class="row">
             <div class="col-6">
                 <div class="form-group pb-2">
@@ -33,9 +33,10 @@
                 </div>
             </div>
         </div>
-        <button type ="submit" class="btn btn-primary">Upload Score</button>
         
+        <button type ="submit" class="btn btn-primary">Upload Score</button>
         @csrf
+        
             
     </form>
     </div>

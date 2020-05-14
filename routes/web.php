@@ -35,7 +35,7 @@ Route::delete('/students/{student}', 'studentController@removeCourse')->name('st
 Route::get('/courses', 'courseController@index')->name('courses.index');
 Route::get('/courses/{course}', 'courseController@show')->name('courses.show');
 Route::get('/courses/{course}/{student}', 'courseController@score')->name('courses.score');
-Route::patch('/courses/{course}/{student}', 'courseController@upload')->name('courses.upload');
+Route::post('/courses/{course}/{student}', 'courseController@upload')->name('courses.upload');
 
 Route::get('/admin', 'adminController@index')->name('admin.index');
 Route::delete('/admin', 'adminController@destroy')->name('admin.destroy');

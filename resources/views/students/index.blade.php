@@ -11,7 +11,7 @@
                 <div class="card-body"> 
                     <ul>
                         @foreach( $students as $stud)
-                            <a href="{{ route('student.show',['student'=>$stud])}}">  <li>{{$stud->name}} </li></a>
+                            <a href="/students/{{ $stud->id }}">  <li>{{$stud->name}} </li></a>
                         @endforeach
                     </ul>
                 </div>        
