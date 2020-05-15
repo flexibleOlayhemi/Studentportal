@@ -35,7 +35,8 @@ class courseController extends Controller
 
          $course->student()->where('student_id',$student->id)
          ->update(['test_score'=> request('ts'),'exam_score'=> request('es'),'total_score' => (request('ts') + request('es'))]);   
-        return redirect('/courses/'.$course->id)->with('message','Score Uploaded');
+      
+         return redirect()->route('courses.show',['course' => $course])->with('message','Score Uploaded');
     }
 
     
