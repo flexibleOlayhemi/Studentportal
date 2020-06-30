@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Student;
 use App\Courses;
 
@@ -32,10 +33,11 @@ class courseController extends Controller
     }
 
     public function upload(Courses $course, Student $student){
-
-         $course->student()->where('student_id',$student->id)
-         ->update(['test_score'=> request('ts'),'exam_score'=> request('es'),'total_score' => (request('ts') + request('es'))]);   
-      
+        DB::table('courses_student')
+        ->where('student_id',$student->id)
+        ->where('courses_id',$course->id)
+        ->update(['test_score'=> request('ts'),'exam_score'=> request('es'),'total_score' => (request('ts') + request('es'))]);   
+         
          return redirect()->route('courses.show',['course' => $course])->with('message','Score Uploaded');
     }
 

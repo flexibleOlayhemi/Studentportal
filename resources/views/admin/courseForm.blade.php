@@ -13,7 +13,7 @@
     </div>
     <form action="{{ route('admin.storecourse') }}" method="POST" class="pb-5">
     @method('PUT')
-        <div class="form-group pb-2">
+            <div class="form-group pb-2">
                 <label for="Name"> Title:</label> 
                 <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                 <div>{{ $errors->first('title') }}</div>

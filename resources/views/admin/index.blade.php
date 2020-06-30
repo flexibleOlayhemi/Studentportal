@@ -2,7 +2,7 @@
 @section('title','Admin Index')
 
 @section('content')
-<div class="container">
+
  
     <div class="row">
         <div class="col-12">
@@ -77,5 +77,5 @@
     <h4 class="alert alert-danger">{{ 'Only Administrators can see this page!!!' }} </h4>
     @endcannot
     
-</div>
+
 @endsection

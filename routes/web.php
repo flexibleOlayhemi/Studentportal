@@ -31,6 +31,11 @@ Route::post('/students/{student}', 'studentController@selectCourse')->name('stud
 Route::options('/students/{student}', 'studentController@checkResults')->name('student.result');
 Route::delete('/students/{student}', 'studentController@removeCourse')->name('student.remcourse');
 
+Route::get('/lecturer','lecturerController@index');
+Route::get('/lecturer/test','lecturerController@createTest')->name('test');
+Route::post('/lecturer/test','lecturerController@addQuestion')->name('lecturer.addQuestion');
+
+
 
 Route::get('/courses', 'courseController@index')->name('courses.index');
 Route::get('/courses/{course}', 'courseController@show')->name('courses.show');
